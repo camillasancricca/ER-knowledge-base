@@ -53,9 +53,6 @@
         <Class IRI="#Relevance"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Time"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#UserAction"/>
     </Declaration>
     <Declaration>
@@ -135,6 +132,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasRelevanceValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTime"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AC_Completeness_1"/>
@@ -736,10 +736,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Relevance"/>
-        <Class IRI="#KnowledgeBase"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Time"/>
         <Class IRI="#KnowledgeBase"/>
     </SubClassOf>
     <SubClassOf>
@@ -4122,7 +4118,6 @@
             <ObjectIntersectionOf>
                 <Class IRI="#DataProfile"/>
                 <Class IRI="#MLApplication"/>
-                <Class IRI="#Time"/>
             </ObjectIntersectionOf>
         </ObjectExactCardinality>
     </ObjectPropertyRange>
@@ -4140,6 +4135,34 @@
             <Class IRI="#MLApplication"/>
         </ObjectMinCardinality>
     </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAttributes"/>
+        <Class IRI="#Dataset"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDatatype"/>
+        <Class IRI="#Dataset"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDimensionality"/>
+        <Class IRI="#Dataset"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFormula"/>
+        <Class IRI="#DQMetric"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInstances"/>
+        <Class IRI="#Dataset"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <Class IRI="#Relevance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTime"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
 </Ontology>
 
 
