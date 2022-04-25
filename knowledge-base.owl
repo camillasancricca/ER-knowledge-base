@@ -1,0 +1,4148 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/camillasancricca/ontologies/2022/3/knowledge-base"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/camillasancricca/ontologies/2022/3/knowledge-base">
+    <Prefix name="" IRI="http://www.semanticweb.org/camillasancricca/ontologies/2022/3/knowledge-base"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="knowledge-base" IRI="http://www.semanticweb.org/camillasancricca/ontologies/2022/3/knowledge-base#"/>
+    <Declaration>
+        <Class IRI="#Context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DPActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DPMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DQ-oriented"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DQDimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DQMetric"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dataset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KnowledgeBase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ML-oriented"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MLApplication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pipeline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relevance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affectsDimensions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consistsOfDPMethods"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dependsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dependsOnML"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDPActivities"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDependentRelation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMethods"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMetrics"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOrthogonalRelation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParallelRelation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPipeline"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProfile"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelevance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#improvesDimensions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComposedOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOptionalFor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAttributes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDatatype"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDimensionality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFormula"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInstances"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRelevanceValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Completeness_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Completeness_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Completeness_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Completeness_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Aggregation_count"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Aggregation_max"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Aggregation_mean"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Aggregation_min"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Aggregation_sum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Anuran_calls_dataset"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Completeness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Consistency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DBScan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Completeness_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Completeness_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Completeness_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Completeness_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Completeness_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Completeness_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Completeness_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Completeness_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_enrichment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Datatype_conversion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dim_red_PCA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dim_red_high_correlation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dim_red_low_variance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dim_red_missing_value_ratio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dim_red_random_forest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discretization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discretization_supervised_entropy-based"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discretization_supervised_statistics-base"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discretization_unsupervised_cluster-based"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discretization_unsupervised_equal_frequency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discretization_unsupervised_equal_width"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dishonest_internet_users_dataset"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Duplicate_detection_entity_clustering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Duplicate_detection_record_linkage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Duplicates_detection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Enrichment_existing_data_augmentation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Enrichment_metadata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Enrichment_primary_key"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Feature_engineering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Feature_engineering_existing_data"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Feature_engineering_external_data"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Feature_engineering_validation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Feature_selection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Feature_selection_supervised_RFE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Feature_selection_supervised_decision_tree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Feature_selection_supervised_filter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Feature_selection_unsupervised_correlations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Generalization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Generalization_concept_hierarchy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#High"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Imputing_dummy_value"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Imputing_mean"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Imputing_median"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Imputing_mode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Imputing_variance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Imputing_with_functional_dependences"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Imputing_with_regression"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Inconsistencies_correction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Inconsistencies_detection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Iris_dataset"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Completeness_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Completeness_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Completeness_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Completeness_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Low"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Metric_Completeness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Metric_Consistency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Metric_Semantic_Accuracy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Metric_Syntactic_Accuracy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Missing_values_detection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mushrooms_dataset"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Completeness_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Completeness_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Completeness_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Completeness_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Normalization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Normalization_max"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Normalization_min"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Normalization_unit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Outlier_detection_distance-based"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Outlier_detection_distribution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Outlier_detection_regression"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Outlier_detection_rules"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Outlier_detection_statistics-based"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Outliers_detection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pipeline_Completeness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pipeline_Consistency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pipeline_Syntactic_Accuracy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Plants_dataset"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Profile_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Profile_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Profile_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Profile_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Soybean_dataset"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Standardization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Standardization_0-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Standardization_Z-score"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Standardization_range"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Standardization_standard_deviation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wine_dataset"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Completeness_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Completeness_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Completeness_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Completeness_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kMeans"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Completeness_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Completeness_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Completeness_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Completeness_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_4"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#DataProfile"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDatatype"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DataProfile"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasDimensionality"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Context"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DPActivity"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DPMethod"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DQ-oriented"/>
+        <Class IRI="#DPActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DQDimension"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DQMetric"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataProfile"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dataset"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ML-oriented"/>
+        <Class IRI="#DPActivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MLApplication"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pipeline"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relevance"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserAction"/>
+        <Class IRI="#KnowledgeBase"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Completeness_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Completeness_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Completeness_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Completeness_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MLApplication"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Aggregation_count"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Aggregation_max"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Aggregation_mean"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Aggregation_min"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Aggregation_sum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#Anuran_calls_dataset"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQDimension"/>
+        <NamedIndividual IRI="#Completeness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQDimension"/>
+        <NamedIndividual IRI="#Consistency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MLApplication"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Completeness_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Completeness_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Completeness_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Completeness_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Completeness_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Completeness_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Completeness_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Completeness_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ML-oriented"/>
+        <NamedIndividual IRI="#Data_enrichment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Datatype_conversion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MLApplication"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Dim_red_PCA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Dim_red_high_correlation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Dim_red_low_variance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Dim_red_missing_value_ratio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Dim_red_random_forest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ML-oriented"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Discretization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ML-oriented"/>
+        <NamedIndividual IRI="#Discretization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Discretization_supervised_entropy-based"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Discretization_supervised_statistics-base"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Discretization_unsupervised_cluster-based"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Discretization_unsupervised_equal_frequency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Discretization_unsupervised_equal_width"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#Dishonest_internet_users_dataset"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Duplicate_detection_entity_clustering"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Duplicate_detection_record_linkage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Duplicates_detection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Enrichment_existing_data_augmentation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Enrichment_metadata"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Enrichment_primary_key"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ML-oriented"/>
+        <NamedIndividual IRI="#Feature_engineering"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Feature_engineering_existing_data"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Feature_engineering_external_data"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Feature_engineering_validation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ML-oriented"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Feature_selection_supervised_RFE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Feature_selection_supervised_decision_tree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Feature_selection_supervised_filter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Feature_selection_unsupervised_correlations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Generalization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Generalization_concept_hierarchy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Imputing_dummy_value"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Imputing_mean"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Imputing_median"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Imputing_mode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Imputing_variance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Imputing_with_functional_dependences"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Imputing_with_regression"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Inconsistencies_correction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ML-oriented"/>
+        <NamedIndividual IRI="#Inconsistencies_correction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Inconsistencies_detection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#Iris_dataset"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Completeness_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Completeness_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Completeness_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Completeness_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MLApplication"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQMetric"/>
+        <NamedIndividual IRI="#Metric_Completeness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQMetric"/>
+        <NamedIndividual IRI="#Metric_Consistency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQMetric"/>
+        <NamedIndividual IRI="#Metric_Semantic_Accuracy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQMetric"/>
+        <NamedIndividual IRI="#Metric_Syntactic_Accuracy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Missing_values_detection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ML-oriented"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ML-oriented"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#Mushrooms_dataset"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Completeness_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Completeness_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Completeness_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Completeness_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MLApplication"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Normalization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Normalization_max"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Normalization_min"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Normalization_unit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Outlier_detection_distance-based"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Outlier_detection_distribution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Outlier_detection_regression"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Outlier_detection_rules"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Outlier_detection_statistics-based"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ML-oriented"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Outliers_detection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pipeline"/>
+        <NamedIndividual IRI="#Pipeline_Completeness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pipeline"/>
+        <NamedIndividual IRI="#Pipeline_Consistency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pipeline"/>
+        <NamedIndividual IRI="#Pipeline_Syntactic_Accuracy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#Plants_dataset"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataProfile"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataProfile"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataProfile"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DataProfile"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQDimension"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#Soybean_dataset"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQ-oriented"/>
+        <NamedIndividual IRI="#Standardization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Standardization_0-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Standardization_Z-score"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Standardization_range"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DPMethod"/>
+        <NamedIndividual IRI="#Standardization_standard_deviation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DQDimension"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dataset"/>
+        <NamedIndividual IRI="#Wine_dataset"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MLApplication"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Completeness_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Completeness_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Completeness_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Completeness_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MLApplication"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Completeness_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Completeness_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Completeness_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Completeness_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Relevance"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_4"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Completeness_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Completeness_1"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Completeness_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Completeness_2"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Completeness_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Completeness_3"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Completeness_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Completeness_4"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProfile"/>
+        <NamedIndividual IRI="#Anuran_calls_dataset"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMetrics"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#Metric_Completeness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPipeline"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#Pipeline_Completeness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#AC_Completeness_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#AC_Completeness_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#AC_Completeness_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#AC_Completeness_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#DB_Completeness_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#DB_Completeness_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#DB_Completeness_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#DB_Completeness_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#DT_Completeness_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#DT_Completeness_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#DT_Completeness_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#DT_Completeness_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#LR_Completeness_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#LR_Completeness_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#LR_Completeness_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#LR_Completeness_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#NB_Completeness_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#NB_Completeness_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#NB_Completeness_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#NB_Completeness_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#kM_Completeness_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#kM_Completeness_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#kM_Completeness_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#kM_Completeness_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#kNN_Completeness_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#kNN_Completeness_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#kNN_Completeness_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Completeness"/>
+        <NamedIndividual IRI="#kNN_Completeness_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMetrics"/>
+        <NamedIndividual IRI="#Consistency"/>
+        <NamedIndividual IRI="#Metric_Consistency"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPipeline"/>
+        <NamedIndividual IRI="#Consistency"/>
+        <NamedIndividual IRI="#Pipeline_Consistency"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DBScan"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Completeness_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Completeness_1"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Completeness_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Completeness_2"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Completeness_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Completeness_3"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Completeness_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Completeness_4"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Completeness_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Completeness_1"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Completeness_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Completeness_2"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Completeness_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Completeness_3"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Completeness_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Completeness_4"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsDimensions"/>
+        <NamedIndividual IRI="#Data_enrichment"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Data_enrichment"/>
+        <NamedIndividual IRI="#Enrichment_existing_data_augmentation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Data_enrichment"/>
+        <NamedIndividual IRI="#Enrichment_metadata"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Data_enrichment"/>
+        <NamedIndividual IRI="#Enrichment_primary_key"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOrthogonalRelation"/>
+        <NamedIndividual IRI="#Data_enrichment"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParallelRelation"/>
+        <NamedIndividual IRI="#Data_enrichment"/>
+        <NamedIndividual IRI="#Feature_engineering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+        <NamedIndividual IRI="#Dim_red_PCA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+        <NamedIndividual IRI="#Dim_red_high_correlation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+        <NamedIndividual IRI="#Dim_red_low_variance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+        <NamedIndividual IRI="#Dim_red_missing_value_ratio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+        <NamedIndividual IRI="#Dim_red_random_forest"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOrthogonalRelation"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+        <NamedIndividual IRI="#Data_enrichment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParallelRelation"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Discretization"/>
+        <NamedIndividual IRI="#Discretization_supervised_entropy-based"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Discretization"/>
+        <NamedIndividual IRI="#Discretization_supervised_statistics-base"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Discretization"/>
+        <NamedIndividual IRI="#Discretization_unsupervised_cluster-based"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Discretization"/>
+        <NamedIndividual IRI="#Discretization_unsupervised_equal_frequency"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Discretization"/>
+        <NamedIndividual IRI="#Discretization_unsupervised_equal_width"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Discretization"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProfile"/>
+        <NamedIndividual IRI="#Dishonest_internet_users_dataset"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Duplicates_detection"/>
+        <NamedIndividual IRI="#Duplicate_detection_entity_clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Duplicates_detection"/>
+        <NamedIndividual IRI="#Duplicate_detection_record_linkage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsDimensions"/>
+        <NamedIndividual IRI="#Feature_engineering"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Feature_engineering"/>
+        <NamedIndividual IRI="#Feature_engineering_existing_data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Feature_engineering"/>
+        <NamedIndividual IRI="#Feature_engineering_external_data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Feature_engineering"/>
+        <NamedIndividual IRI="#Feature_engineering_validation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOrthogonalRelation"/>
+        <NamedIndividual IRI="#Feature_engineering"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParallelRelation"/>
+        <NamedIndividual IRI="#Feature_engineering"/>
+        <NamedIndividual IRI="#Data_enrichment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Feature_engineering"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+        <NamedIndividual IRI="#Feature_selection_supervised_RFE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+        <NamedIndividual IRI="#Feature_selection_supervised_decision_tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+        <NamedIndividual IRI="#Feature_selection_supervised_filter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+        <NamedIndividual IRI="#Feature_selection_unsupervised_correlations"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOrthogonalRelation"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+        <NamedIndividual IRI="#Feature_engineering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParallelRelation"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+        <NamedIndividual IRI="#Dimensionality_reduction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Feature_selection"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Generalization"/>
+        <NamedIndividual IRI="#Aggregation_count"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Generalization"/>
+        <NamedIndividual IRI="#Aggregation_max"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Generalization"/>
+        <NamedIndividual IRI="#Aggregation_mean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Generalization"/>
+        <NamedIndividual IRI="#Aggregation_min"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Generalization"/>
+        <NamedIndividual IRI="#Aggregation_sum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Generalization"/>
+        <NamedIndividual IRI="#Generalization_concept_hierarchy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsDimensions"/>
+        <NamedIndividual IRI="#Inconsistencies_correction"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#improvesDimensions"/>
+        <NamedIndividual IRI="#Inconsistencies_correction"/>
+        <NamedIndividual IRI="#Consistency"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDependentRelation"/>
+        <NamedIndividual IRI="#Inconsistencies_detection"/>
+        <NamedIndividual IRI="#Inconsistencies_correction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProfile"/>
+        <NamedIndividual IRI="#Iris_dataset"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Completeness_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Completeness_1"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Completeness_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Completeness_2"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Completeness_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Completeness_3"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Completeness_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Completeness_4"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDependentRelation"/>
+        <NamedIndividual IRI="#Missing_values_detection"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDependentRelation"/>
+        <NamedIndividual IRI="#Missing_values_detection"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#improvesDimensions"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+        <NamedIndividual IRI="#Completeness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsDimensions"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Imputing_dummy_value"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Imputing_mean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Imputing_median"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Imputing_mode"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Imputing_variance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Imputing_with_functional_dependences"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Imputing_with_regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#improvesDimensions"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Completeness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProfile"/>
+        <NamedIndividual IRI="#Mushrooms_dataset"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Completeness_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Completeness_1"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Completeness_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Completeness_2"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Completeness_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Completeness_3"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Completeness_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Completeness_4"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsDimensions"/>
+        <NamedIndividual IRI="#Normalization"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Normalization"/>
+        <NamedIndividual IRI="#Normalization_max"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Normalization"/>
+        <NamedIndividual IRI="#Normalization_min"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Normalization"/>
+        <NamedIndividual IRI="#Normalization_unit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsDimensions"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#improvesDimensions"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+        <NamedIndividual IRI="#DBScan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+        <NamedIndividual IRI="#Logistic_Regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+        <NamedIndividual IRI="#Decision_Tree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+        <NamedIndividual IRI="#Naive_Bayes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDependentRelation"/>
+        <NamedIndividual IRI="#Outliers_detection"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Outliers_detection"/>
+        <NamedIndividual IRI="#Outlier_detection_distance-based"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Outliers_detection"/>
+        <NamedIndividual IRI="#Outlier_detection_distribution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Outliers_detection"/>
+        <NamedIndividual IRI="#Outlier_detection_regression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Outliers_detection"/>
+        <NamedIndividual IRI="#Outlier_detection_rules"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Outliers_detection"/>
+        <NamedIndividual IRI="#Outlier_detection_statistics-based"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDPActivities"/>
+        <NamedIndividual IRI="#Pipeline_Completeness"/>
+        <NamedIndividual IRI="#Missing_values_detection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDPActivities"/>
+        <NamedIndividual IRI="#Pipeline_Completeness"/>
+        <NamedIndividual IRI="#Missing_values_drop"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDPActivities"/>
+        <NamedIndividual IRI="#Pipeline_Completeness"/>
+        <NamedIndividual IRI="#Missing_values_imputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDPActivities"/>
+        <NamedIndividual IRI="#Pipeline_Consistency"/>
+        <NamedIndividual IRI="#Inconsistencies_correction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDPActivities"/>
+        <NamedIndividual IRI="#Pipeline_Consistency"/>
+        <NamedIndividual IRI="#Inconsistencies_detection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDPActivities"/>
+        <NamedIndividual IRI="#Pipeline_Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#Outliers_deletion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDPActivities"/>
+        <NamedIndividual IRI="#Pipeline_Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#Outliers_detection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProfile"/>
+        <NamedIndividual IRI="#Plants_dataset"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#Profile_3"/>
+        <NamedIndividual IRI="#Agglomerative_Clustering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMetrics"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#Metric_Semantic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProfile"/>
+        <NamedIndividual IRI="#Soybean_dataset"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsDimensions"/>
+        <NamedIndividual IRI="#Standardization"/>
+        <NamedIndividual IRI="#Semantic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Standardization"/>
+        <NamedIndividual IRI="#Standardization_0-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Standardization"/>
+        <NamedIndividual IRI="#Standardization_Z-score"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Standardization"/>
+        <NamedIndividual IRI="#Standardization_range"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMethods"/>
+        <NamedIndividual IRI="#Standardization"/>
+        <NamedIndividual IRI="#Standardization_standard_deviation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMetrics"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#Metric_Syntactic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPipeline"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#Pipeline_Syntactic_Accuracy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <NamedIndividual IRI="#Syntactic_Accuracy"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProfile"/>
+        <NamedIndividual IRI="#Wine_dataset"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Completeness_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Completeness_1"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Completeness_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Completeness_2"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Completeness_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Completeness_3"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Completeness_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Completeness_4"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#kMeans"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Completeness_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Completeness_1"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Completeness_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Completeness_2"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Completeness_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Completeness_3"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Completeness_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Completeness_4"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_1"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_2"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_3"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_4"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#Profile_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_1"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#Profile_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_2"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#Profile_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_3"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#Profile_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_4"/>
+        <NamedIndividual IRI="#k-Nearest_Neighbors"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Completeness_1"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Completeness_2"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Completeness_3"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Completeness_4"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_1"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_2"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_3"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Semantic_Accuracy_4"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_1"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_2"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_3"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#AC_Syntactic_Accuracy_4"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAttributes"/>
+        <NamedIndividual IRI="#Anuran_calls_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstances"/>
+        <NamedIndividual IRI="#Anuran_calls_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7195</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Completeness_1"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Completeness_2"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Completeness_3"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Completeness_4"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_1"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_2"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_3"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Semantic_Accuracy_4"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_1"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_2"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_3"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DB_Syntactic_Accuracy_4"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Completeness_1"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Completeness_2"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Completeness_3"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Completeness_4"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_1"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_2"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_3"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Semantic_Accuracy_4"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_1"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_2"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_3"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#DT_Syntactic_Accuracy_4"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAttributes"/>
+        <NamedIndividual IRI="#Dishonest_internet_users_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstances"/>
+        <NamedIndividual IRI="#Dishonest_internet_users_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">322</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAttributes"/>
+        <NamedIndividual IRI="#Iris_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstances"/>
+        <NamedIndividual IRI="#Iris_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#LR_Completeness_2"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#LR_Completeness_3"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#LR_Completeness_4"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_2"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_3"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#LR_Semantic_Accuracy_4"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_2"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_3"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#LR_Syntactic_Accuracy_4"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFormula"/>
+        <NamedIndividual IRI="#Metric_Completeness"/>
+        <Literal>#not-null_values/#total_values</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFormula"/>
+        <NamedIndividual IRI="#Metric_Consistency"/>
+        <Literal>#consistent_values/#total_values</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFormula"/>
+        <NamedIndividual IRI="#Metric_Semantic_Accuracy"/>
+        <Literal>#correct_values/#total_values</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFormula"/>
+        <NamedIndividual IRI="#Metric_Syntactic_Accuracy"/>
+        <Literal>#in-range_values/#total_values</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAttributes"/>
+        <NamedIndividual IRI="#Mushrooms_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstances"/>
+        <NamedIndividual IRI="#Mushrooms_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8124</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Completeness_1"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Completeness_2"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Completeness_3"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Completeness_4"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_1"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_2"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_3"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Semantic_Accuracy_4"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_1"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_2"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_3"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#NB_Syntactic_Accuracy_4"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAttributes"/>
+        <NamedIndividual IRI="#Plants_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">70</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstances"/>
+        <NamedIndividual IRI="#Plants_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3480</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDatatype"/>
+        <NamedIndividual IRI="#Profile_1"/>
+        <Literal>Numerical</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDimensionality"/>
+        <NamedIndividual IRI="#Profile_1"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDatatype"/>
+        <NamedIndividual IRI="#Profile_2"/>
+        <Literal>Numerical</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDimensionality"/>
+        <NamedIndividual IRI="#Profile_2"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDatatype"/>
+        <NamedIndividual IRI="#Profile_3"/>
+        <Literal>Categorical</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDimensionality"/>
+        <NamedIndividual IRI="#Profile_3"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDatatype"/>
+        <NamedIndividual IRI="#Profile_4"/>
+        <Literal>Categorical</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDimensionality"/>
+        <NamedIndividual IRI="#Profile_4"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAttributes"/>
+        <NamedIndividual IRI="#Soybean_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstances"/>
+        <NamedIndividual IRI="#Soybean_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">250</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAttributes"/>
+        <NamedIndividual IRI="#Wine_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstances"/>
+        <NamedIndividual IRI="#Wine_dataset"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Completeness_1"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Completeness_2"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Completeness_3"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Completeness_4"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_1"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_2"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_3"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Semantic_Accuracy_4"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_1"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_2"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_3"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kM_Syntactic_Accuracy_4"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Completeness_1"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Completeness_2"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Completeness_3"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Completeness_4"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_1"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_2"/>
+        <Literal>Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_3"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Semantic_Accuracy_4"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_1"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_2"/>
+        <Literal>High</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_3"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelevanceValue"/>
+        <NamedIndividual IRI="#kNN_Syntactic_Accuracy_4"/>
+        <Literal>Low</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <ObjectProperty IRI="#dependsOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <ObjectProperty IRI="#dependsOn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDependentRelation"/>
+        <ObjectProperty IRI="#hasRelation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOrthogonalRelation"/>
+        <ObjectProperty IRI="#hasRelation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasParallelRelation"/>
+        <ObjectProperty IRI="#hasRelation"/>
+    </SubObjectPropertyOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasDPActivities"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasMethods"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasOrthogonalRelation"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasParallelRelation"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasPipeline"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affectsDimensions"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#affectsDimensions"/>
+            <Class IRI="#DPActivity"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consistsOfDPMethods"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#consistsOfDPMethods"/>
+            <Class IRI="#UserAction"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#dependsOn"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#dependsOn"/>
+            <Class IRI="#Relevance"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContext"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasContext"/>
+            <Class IRI="#UserAction"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDPActivities"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasDPActivities"/>
+            <Class IRI="#Pipeline"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMethods"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasMethods"/>
+            <Class IRI="#DPActivity"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMetrics"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasMetrics"/>
+            <Class IRI="#DQDimension"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPipeline"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPipeline"/>
+            <Class IRI="#DQDimension"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProfile"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasProfile"/>
+            <Class IRI="#Dataset"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelation"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasRelation"/>
+            <Class IRI="#DPActivity"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasRelevance"/>
+            <Class IRI="#DQDimension"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#improvesDimensions"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#improvesDimensions"/>
+            <Class IRI="#DPActivity"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isComposedOf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isComposedOf"/>
+            <Class IRI="#Context"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#isCompulsoryFor"/>
+            <Class IRI="#DPActivity"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#isOptionalFor"/>
+            <Class IRI="#DPActivity"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affectsDimensions"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#affectsDimensions"/>
+            <Class IRI="#DQDimension"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consistsOfDPMethods"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#consistsOfDPMethods"/>
+            <Class IRI="#DPMethod"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#dependsOn"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#dependsOn"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#DataProfile"/>
+                <Class IRI="#MLApplication"/>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#dependsOnDataProfile"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#dependsOnDataProfile"/>
+            <Class IRI="#DataProfile"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#dependsOnML"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#dependsOnML"/>
+            <Class IRI="#MLApplication"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContext"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasContext"/>
+            <Class IRI="#Context"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDPActivities"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDPActivities"/>
+            <Class IRI="#DPActivity"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMethods"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMethods"/>
+            <Class IRI="#DPMethod"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMetrics"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetrics"/>
+            <Class IRI="#DQMetric"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPipeline"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPipeline"/>
+            <Class IRI="#Pipeline"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProfile"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasProfile"/>
+            <Class IRI="#DataProfile"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelation"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasRelation"/>
+            <Class IRI="#DPActivity"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelevance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRelevance"/>
+            <Class IRI="#Relevance"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#improvesDimensions"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#improvesDimensions"/>
+            <Class IRI="#DQDimension"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isComposedOf"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#isComposedOf"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#DataProfile"/>
+                <Class IRI="#MLApplication"/>
+                <Class IRI="#Time"/>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCompulsoryFor"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#isCompulsoryFor"/>
+            <Class IRI="#MLApplication"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isOptionalFor"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#isOptionalFor"/>
+            <Class IRI="#MLApplication"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
