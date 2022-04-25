@@ -116,6 +116,9 @@
         <ObjectProperty IRI="#isOptionalFor"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasAim"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasAttributes"/>
     </Declaration>
     <Declaration>
@@ -4135,6 +4138,10 @@
             <Class IRI="#MLApplication"/>
         </ObjectMinCardinality>
     </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAim"/>
+        <Class IRI="#UserAction"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasAttributes"/>
         <Class IRI="#Dataset"/>
